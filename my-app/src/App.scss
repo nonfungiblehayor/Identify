@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 $font : 'Inter', sans-serif;
 
@@ -102,6 +102,69 @@ $font : 'Inter', sans-serif;
                 img {
                     height: 501px;
                 }
+            }
+        }
+    }
+    .section2 {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #253038;
+        align-items: center;
+        padding-top: 7vw;
+        .div1 {
+            display: flex;
+            width: 75vw;
+            border-radius: 25px;
+            background-color: #2D3A44;
+            padding: 15px;
+            p {
+                color: #FFFFFF;
+                font-family: $font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 36px;
+            }
+        }
+        .div2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: 100%;
+            justify-content: space-between;
+            gap: 13vw;
+            margin-top: 4vw;
+            div {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    color: #FFFFFF;
+                    font-size: 47px;
+                    font-family: $font;
+                    width: 32vw;
+                    line-height: 64px;
+                    margin-bottom: 1vw;
+                }
+                p {
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    font-family: $font;
+                    line-height: 36px;
+                    width: 27vw;
+                    font-weight: 400;
+                }
+            }
+            img {
+                height: 297px;
+            }
+        }
+        .div3 {
+            @extend .div2;
+            div {
+                order: 2;
+            }
+            img {
+                order: 1;
             }
         }
     }
