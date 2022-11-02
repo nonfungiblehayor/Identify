@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+.App {
+  padding: 0;
+  margin: 0;
+}
+.App section {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  background-color: #24272A;
+}
+.App section header {
+  display: grid;
+  grid-template-columns: 10vw 25vw auto;
+  max-width: 100%;
+  align-items: center;
+}
+.App section header .first-header-div {
+  width: 10vw;
+}
+.App section header .first-header-div p {
+  color: #1098FC;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.App section header .second-header-div {
+  display: flex;
+  flex-direction: row;
+  width: 25vw;
+  justify-content: space-around;
+}
+.App section header .second-header-div a {
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.App section header .third-header-div {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  justify-self: end;
+  padding-right: 30px;
+}
+.App section header .third-header-div button:nth-child(1) {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+.App section header .third-header-div button:nth-child(2) {
+  border: 1px solid #FFFFFF;
+  width: 13vw;
+  border-radius: 47px;
+  background-color: transparent;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+.App section .card-section {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10vw;
+}
+.App section .card-section .card-section-1 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 75px;
+}
+.App section .card-section .card-section-1 h4 {
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 47px;
+  width: 30vw;
+  margin-bottom: 1vw;
+}
+.App section .card-section .card-section-1 p {
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+}
+.App section .card-section .card-section-1 button {
+  background-color: #1098FC;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  border-radius: 47px;
+  width: 13vw;
+  border: none;
+  padding: 15px;
+}
+.App section .card-section .card-section-2 img {
+  height: 501px;
+}/*# sourceMappingURL=App.css.map */
