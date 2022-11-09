@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChildDiv from './universalChild.js'
 import Component1 from '../images/Component1.svg'
+import Group from '../images/Group.svg'
 
 
 
@@ -16,10 +17,9 @@ class Universal extends Component {
                 that helpsIdentity NFT is a system that helpsIdentity NFT is a system that helps
                 </p>
             </div>
-            <ChildDiv className='div2' pfp={Component1} text='Identity Token is a system that helps Identity Token is a system that helpsIdentity Token is a system that helps Identity Token is a system that helps Identity Token is a system that helps Identity NFT is a system that helpsIdentity NFT is a system that helpsIdentity'/>
-            <ChildDiv className='div3' pfp={Component1} text='Identity Token is a system that helps Identity Token is a system that helpsIdentity Token is a system that helps Identity Token is a system that helps Identity Token is a system that helps Identity NFT is a system that helpsIdentity NFT is a system that helpsIdentity'/>
-            <ChildDiv className='div2' pfp={Component1} text='Identity Token is a system that helps Identity Token is a system that helpsIdentity Token is a system that helps Identity Token is a system that helps Identity Token is a system that helps Identity NFT is a system that helpsIdentity NFT is a system that helpsIdentity'/>
-            
+            <ChildDiv className='div2' text='Connect your wallet' text2='To start the Identity minting process,
+                your wallet will have to be connected
+                first to the system' img={Component1} img2={Group}/>
         </section>
     }
 }

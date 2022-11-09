@@ -131,41 +131,47 @@ $font : 'Inter', sans-serif;
             flex-direction: row;
             align-items: center;
             max-width: 100%;
-            justify-content: space-between;
-            gap: 13vw;
+            gap: 7vw;
             margin-top: 4vw;
-            div {
+                .lin-div2 {
+                    display: flex;
+                    img { 
+                        width: 33px;
+                        height: 749px;
+                    }
+                }
+                .text-div {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .text-div2 {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: -1vw;
+                    h3 {
+                        color: #FFFFFF;
+                        font-size: 33px;
+                        font-family: $font;
+                        line-height: 64px;
+                        font-weight: 700;
+                        margin-bottom: -1.5vw;
+                    }
+                    p {
+                        color: #ffffff5c;
+                        font-size: 16px;
+                        font-family: $font;
+                        line-height: 36px;
+                        width: 27vw;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .img-div2 {
                 display: flex;
-                flex-direction: column;
-                h4 {
-                    color: #FFFFFF;
-                    font-size: 47px;
-                    font-family: $font;
-                    width: 32vw;
-                    line-height: 64px;
-                    margin-bottom: 1vw;
+                align-items: center;
+                img {
+                    width: 578px;
                 }
-                p {
-                    color: #FFFFFF;
-                    font-size: 16px;
-                    font-family: $font;
-                    line-height: 36px;
-                    width: 27vw;
-                    font-weight: 400;
-                }
-            }
-            img {
-                height: 297px;
-            }
-        }
-        .div3 {
-            @extend .div2;
-            div {
-                order: 2;
-            }
-            img {
-                order: 1;
             }
         }
     }
-}

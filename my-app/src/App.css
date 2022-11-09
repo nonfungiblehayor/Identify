@@ -123,41 +123,50 @@
   font-weight: 400;
   line-height: 36px;
 }
-.App .section2 .div2, .App .section2 .div3 {
+.App .section2 .div2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   max-width: 100%;
-  justify-content: space-between;
-  gap: 13vw;
+  gap: 7vw;
   margin-top: 4vw;
 }
-.App .section2 .div2 div, .App .section2 .div3 div {
+.App .section2 .div2 .lin-div2 {
+  display: flex;
+}
+.App .section2 .div2 .lin-div2 img {
+  width: 33px;
+  height: 749px;
+}
+.App .section2 .div2 .text-div {
   display: flex;
   flex-direction: column;
 }
-.App .section2 .div2 div h4, .App .section2 .div3 div h4 {
-  color: #FFFFFF;
-  font-size: 47px;
-  font-family: "Inter", sans-serif;
-  width: 32vw;
-  line-height: 64px;
-  margin-bottom: 1vw;
+.App .section2 .div2 .text-div2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -1vw;
 }
-.App .section2 .div2 div p, .App .section2 .div3 div p {
+.App .section2 .div2 .text-div2 h3 {
   color: #FFFFFF;
+  font-size: 33px;
+  font-family: "Inter", sans-serif;
+  line-height: 64px;
+  font-weight: 700;
+  margin-bottom: -1.5vw;
+}
+.App .section2 .div2 .text-div2 p {
+  color: rgba(255, 255, 255, 0.3607843137);
   font-size: 16px;
   font-family: "Inter", sans-serif;
   line-height: 36px;
   width: 27vw;
   font-weight: 400;
 }
-.App .section2 .div2 img, .App .section2 .div3 img {
-  height: 297px;
+.App .section2 .img-div2 {
+  display: flex;
+  align-items: center;
 }
-.App .section2 .div3 div {
-  order: 2;
-}
-.App .section2 .div3 img {
-  order: 1;
+.App .section2 .img-div2 img {
+  width: 578px;
 }/*# sourceMappingURL=App.css.map */
