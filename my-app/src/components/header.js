@@ -1,18 +1,26 @@
-import React, { Component } from 'react'
+import React, { useRef } from 'react'
 import Component1 from '../images/Component1.svg'
 import menu from '../images/menu.png'
+import cancel from '../images/cancel.png'
 
-class Header extends Component {
-    render() {
+function Header() {
+    const divRef = useRef()
+
+    const showMenu = function() {
+        divRef.current.style.display = 'flex'
+     }
+    const closeMenu = function() {
+        divRef.current.style.display = 'none'
+    }
         return <section>
             <header>
             <div className='first-header-div'>
                 <p>Identify</p>
-                <img src={menu} alt='menu-icon'></img>
+                <img src={menu} alt='menu-icon' onClick={showMenu}></img>
             </div>
-            <div className='single-entity'>
+            <div className='single-entity' ref={divRef}>
                 <div className='first-header-div'>
-                <p>Identify</p>
+                <img src={cancel} alt='cancel logo' onClick={closeMenu}></img>
                 </div>
                 <div className='second-header-div'>
                 <a href='../App.js'>Mint</a>
@@ -41,6 +49,5 @@ class Header extends Component {
             </div>
         </section>
     }
-}
 
 export default Header;

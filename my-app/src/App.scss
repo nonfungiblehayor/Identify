@@ -348,12 +348,21 @@ $font : 'Inter', sans-serif;
                     display: none;
                     flex-direction: column;
                     align-items: center;
-                    gap: 8vw;
+                    align-content: space-around;
                     z-index: 1;
-                    margin-top: -15vw;
-                   padding-bottom: 15px;
+                    gap: 15vw;
+                    height: 552px;
+                    background-color: #2D3A44;
+                    margin-top: -38vw;
+                    margin-bottom: -350px;
                     .first-header-div {
                         display: flex;
+                        margin-bottom: 100px;
+                        padding-top: 45px;
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
                     }
                 .second-header-div {
                     display: flex;
@@ -376,6 +385,7 @@ $font : 'Inter', sans-serif;
                     gap: 15px;
                     max-width: 100%;
                     padding-left: 6vw;
+                    margin-top: 80px;
                     button:nth-child(1) {
                         align-self: center;
                         border: none;
@@ -651,8 +661,7 @@ $font : 'Inter', sans-serif;
                 }
             }
         }        
-    }
-    
+    }    
 }
 @media screen and(max-width: 1024px) {
     .App {
@@ -692,8 +701,9 @@ $font : 'Inter', sans-serif;
                     align-items: center;
                     gap: 8vw;
                     z-index: 1;
-                    margin-top: -15vw;
+                     margin-top: -15vw;
                    padding-bottom: 15px;
+                   background-color: #2D3A44;
                     .first-header-div {
                         display: flex;
                     }
@@ -993,6 +1003,5 @@ $font : 'Inter', sans-serif;
                 }
             }
         }        
-    }
-    
+    }    
 }
