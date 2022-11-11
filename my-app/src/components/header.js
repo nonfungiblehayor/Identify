@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Component1 from '../images/Component1.svg'
+import menu from '../images/menu.png'
 
 class Header extends Component {
     render() {
@@ -7,15 +8,21 @@ class Header extends Component {
             <header>
             <div className='first-header-div'>
                 <p>Identify</p>
+                <img src={menu} alt='menu-icon'></img>
             </div>
-            <div className='second-header-div'>
+            <div className='single-entity'>
+                <div className='first-header-div'>
+                <p>Identify</p>
+                </div>
+                <div className='second-header-div'>
                 <a href='../App.js'>Mint</a>
                 <a href='../App.js'>About US</a>
                 <a href='../App.js'>Whitepaper</a>
-            </div>
-            <div className='third-header-div'>
+                </div>
+                <div className='third-header-div'>
                 <button>Login</button>
                 <button>Get started</button>
+                </div>
             </div>
             </header>
             <div className='card-section'>

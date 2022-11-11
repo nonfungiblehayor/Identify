@@ -11,10 +11,9 @@ class Universal extends Component {
         return <section className={sectionClass}>
             <div className='div1'>
                 <p>
-                Identity NFT is a system that helps Identity 
-                NFT is a system that helpsIdentity NFT is a system that helpsIdentity 
-                NFT is a system that helpsIdentity NFT is a system that helps Identity NFT is a system 
-                that helpsIdentity NFT is a system that helpsIdentity NFT is a system that helps
+                identify is an identity minting system helping individuals and 
+                organisations easily verify their identities in the web3ecosystem.
+                It makes it possible to reduce identity misplacals.
                 </p>
             </div>
             <ChildDiv className='div2' text='Connect your wallet' text2='To start the Identity minting process,
