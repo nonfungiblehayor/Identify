@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 $font : 'Inter', sans-serif;
 $whiteColor: #FFFFFF;
@@ -112,5 +113,78 @@ body {
                 border-radius: 47px;
             }
         }
+    }
+    .working-section {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #24272A;
+        padding-top: 65px;
+        .working-details {
+            display: flex;
+            flex-direction: column;
+            width: 1033px;
+            background-color: #2D3A44;
+            border-radius: 25px;
+            padding: 27px 36px 27px 36px;
+            h4 {
+                color: $whiteColor;
+                font-weight: $weight700;
+                font-family: $font;
+                font-size: 47px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: #F2F2F2;
+                font-weight: 400;
+                font-family: $font;
+                font-size: 16px;
+                width: 938px;
+                line-height: 24px;
+            }
+        }
+    .working-steps {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        margin-top: 40px;
+        gap: 40px;
+        .list-of-steps {
+            width: 33px;
+            height: 749px;
+        }
+        .stages {
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            .steps {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    font-weight: $weight700;
+                    font-size: 33px;
+                    font-weight: $font;
+                    color: $whiteColor;
+                    width: 259px;
+                    margin-bottom: 8px;
+                }
+                p {
+                    width: 259px;
+                    color: $whiteColor;
+                    font-weight: 400;
+                    font-family: $font;
+                    font-size: 16px;
+                }
+            }
+        }
+        .nft-card {
+            img{
+                width: 578px;
+                height: 501px;
+            }
+        }
+    }
     }
 }
