@@ -187,4 +187,45 @@ body {
         }
     }
     }
+    .useCase-section {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-weight: $weight700;
+            color: $whiteColor;
+            font-size: 47px;
+            font-family: $font;
+            margin-left: 120px;
+        }
+        .first-case {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 35px;
+            .case {
+                width: 315px;
+                height: 380px;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $whiteColor;
+                border-radius: 15px;
+                gap: 10px;
+                .bg-nav {
+                    background-image: url(./images/FrameCoinB.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 315px;
+                    height: 259px;
+                }
+                span {
+                    font-weight: $weight700;
+                    font-size: 23px;
+                    font-family: $font;
+                    color: $whiteColor;
+                    width: 271px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
 }
