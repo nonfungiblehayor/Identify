@@ -27,6 +27,9 @@ body {
             font-weight: 700;
             font-family: $font;
         }
+        .menu {
+            display: none;
+        }
         div {
             display: flex;
             flex-direction: row;
@@ -313,6 +316,9 @@ body {
                 font-weight: 700;
                 font-family: $font;
             }
+            .menu {
+                display: none;
+            }
             div {
                 display: flex;
                 flex-direction: row;
@@ -526,4 +532,631 @@ body {
         }
     }
         
+}
+
+@media screen and (max-width: 768px) and (min-width: 582px) {
+    .App {
+        padding: 0;
+        margin: 0;
+        header {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            gap: 15px;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            h4 {
+                color: #1098FC;
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $font;
+            }
+            .menu {
+                display: none;
+            }
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 500px;
+                .nav_link {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                    align-items: center;
+                    a {
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: $font;
+                        text-decoration: none;
+                    }
+                }
+                .nav_btn {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    align-items: center;
+                    .login {
+                        background-color: transparent;
+                        border: none;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                    }
+                    .getStarted {
+                        background-color: transparent;
+                        border: 1px solid $whiteColor;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: $whiteColor;
+                        text-align: center;
+                        width: 120px;
+                        padding: 8px 18px 8px 18px;
+                        border-radius: 47px;
+                    }
+                }
+            }
+        }
+        .sub-header {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+            .first-div {
+                display: flex;
+                flex-direction: column;
+                padding-top: 40px;
+                padding-left: 40px;
+                padding-bottom: 25px;
+                align-items: center;
+                h1 {
+                    font-size: 32px;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    color: #FFFFFF;
+                    width: 380px;
+                    text-align: center;
+                }
+                p {
+                    color: $whiteColor;
+                    font-size: 19px;
+                    font-family: $font;
+                    font-weight: $weight500;
+                    width: 308px;
+                }
+                button {
+                    background-color: #1098FC;
+                    height: 48px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    font-weight: $weight500;
+                    font-size: 15px;
+                    font-family: $font;
+                    text-align: center;
+                    border: none;
+                    width: 223px;
+                    padding: 8px 48px 8px 48px;
+                    border-radius: 47px;
+                }
+            }
+            .second-div {
+                img {
+                    width: 350px;
+                    height: 301px;
+                }
+            }
+        }
+        .working-section {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #24272A;
+            padding-top: 65px;
+            .working-details {
+                display: flex;
+                flex-direction: column;
+                width: 433px;
+                background-color: #2D3A44;
+                border-radius: 25px;
+                h4 {
+                    color: $whiteColor;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #F2F2F2;
+                    font-weight: 400;
+                    font-family: $font;
+                    font-size: 16px;
+                    width: 400px;
+                    line-height: 34px;
+                }
+            }
+        .working-steps {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 100%;
+            gap: 40px;
+            .list-of-steps {
+                width: 33px;
+                height: 749px;
+            }
+            .stages {
+                display: flex;
+                flex-direction: column;
+                padding-top: 60px;
+                .steps {
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        font-weight: $weight700;
+                        font-size: 33px;
+                        font-weight: $font;
+                        color: $whiteColor;
+                        width: 259px;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        width: 259px;
+                        color: $whiteColor;
+                        font-weight: 400;
+                        font-family: $font;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .nft-card {
+                img{
+                    width: 178px;
+                    height: 190px;
+                }
+            }
+        }
+        } 
+        .useCase-section {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 25px;
+            h3 {
+                font-weight: $weight700;
+                color: $whiteColor;
+                font-size: 47px;
+                font-family: $font;
+                margin-left: 120px;
+            }
+            .first-case {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 35px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding-left: 580px;
+                align-items: center;
+                .case {
+                    width: 180px;
+                    height: 280px;
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid $whiteColor;
+                    border-radius: 15px;
+                    gap: 10px;
+                    scroll-snap-align: center;
+                    .bg-nav {
+                        background-image: url(./images/FrameCoinB.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 180px;
+                        height: 259px;
+                    }
+                    span {
+                        font-weight: $weight700;
+                        font-size: 18px;
+                        font-family: $font;
+                        color: $whiteColor;
+                        width: 150px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-color: #2D3A44;
+            justify-content: center;
+            gap: 60px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            .footer-div-1 {
+                display: flex;
+                flex-direction: column;
+               justify-content: space-around;
+               padding-left: 25px;
+                h3 {
+                    font-weight: $weight700;
+                    color: #1098FC;
+                    font-family: $font;
+                    font-size: 24px;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 35px;
+                    .foot-links {
+                        display: flex;
+                        flex-direction: column;
+                        h5 {
+                            color: $whiteColor;
+                            font-family: $font;
+                            font-size: 16px;
+                            font-weight: $weight700;
+                        }
+                        a {
+                            color: #F2F2F2;
+                            font-family: $font;
+                            font-size: 16px;
+                            font-weight: 400;
+                            text-decoration: none;
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+            .footer-div-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 25px;
+                padding-left: 25px;
+                span {
+                    color: #F2F2F2;
+                    font-family: $font;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }        
+}
+
+@media screen and (max-width: 581px) and (min-width: 320px) {
+    .App {
+        padding: 0;
+        margin: 0;
+        header {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            h4 {
+                color: #1098FC;
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $font;
+            }
+            .menu {
+                display: flex;
+                width: 56px;
+                height: 48px;
+            }
+            div {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 500px;
+                background-color: #253038;
+                gap: 25px;
+                z-index: 1;
+                .nav_link {
+                    flex-direction: column;
+                    gap: 25px;
+                    align-items: center;
+                    a {
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: $font;
+                        text-decoration: none;
+                    }
+                }
+                .nav_btn {
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                    .login {
+                        background-color: #1098FC;
+                        border: none;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: $whiteColor;
+                        text-align: center;
+                        width: 280px;
+                        padding: 14px 18px 14px 18px;
+                        border-radius: 47px;
+                    }
+                    .getStarted {
+                        background-color: transparent;
+                        border: 1px solid $whiteColor;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: $whiteColor;
+                        text-align: center;
+                        width: 280px;
+                        padding: 14px 18px 14px 18px;
+                        border-radius: 47px;
+                    }
+                }
+            }
+        } 
+        .sub-header {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+            .first-div {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 25px;
+                align-items: center;
+                justify-content: center;
+                h1 {
+                    font-size: 32px;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    color: #FFFFFF;
+                    width: 250px;
+                    text-align: center;
+                }
+                p {
+                    color: $whiteColor;
+                    font-size: 19px;
+                    font-family: $font;
+                    font-weight: $weight500;
+                    width: 250px;
+                    text-align: center;
+                }
+                button {
+                    background-color: #1098FC;
+                    height: 48px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    font-weight: $weight500;
+                    font-size: 15px;
+                    font-family: $font;
+                    text-align: center;
+                    border: none;
+                    width: 223px;
+                    padding: 8px 48px 8px 48px;
+                    border-radius: 47px;
+                }
+            }
+            .second-div {
+                img {
+                    width: 250px;
+                    height: 301px;
+                }
+            }
+        }    
+        .working-section {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #24272A;
+            padding-top: 65px;
+            .working-details {
+                display: flex;
+                flex-direction: column;
+                width: 280px;
+                background-color: #2D3A44;
+                border-radius: 25px;
+                h4 {
+                    color: $whiteColor;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #F2F2F2;
+                    font-weight: 400;
+                    font-family: $font;
+                    font-size: 16px;
+                    width: 300px;
+                    line-height: 34px;
+                }
+            }
+        .working-steps {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 100%;
+            gap: 40px;
+            .list-of-steps {
+                width: 33px;
+                height: 749px;
+            }
+            .stages {
+                display: flex;
+                flex-direction: column;
+                padding-top: 60px;
+                .steps {
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        font-weight: $weight700;
+                        font-size: 33px;
+                        font-weight: $font;
+                        color: $whiteColor;
+                        width: 259px;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        width: 259px;
+                        color: $whiteColor;
+                        font-weight: 400;
+                        font-family: $font;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .nft-card {
+                
+                    width: 320px;
+                    height: 280px;
+            }
+        }
+        } 
+        .useCase-section {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 25px;
+            h3 {
+                font-weight: $weight700;
+                color: $whiteColor;
+                font-size: 24px;
+                font-family: $font;
+                align-self: flex-start;
+            }
+            .first-case {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 35px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding-left: 320px;
+                align-items: center;
+                .case {
+                    width: 180px;
+                    height: 280px;
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid $whiteColor;
+                    border-radius: 15px;
+                    gap: 10px;
+                    scroll-snap-align: start;
+                    .bg-nav {
+                        background-image: url(./images/FrameCoinB.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 180px;
+                        height: 259px;
+                    }
+                    span {
+                        font-weight: $weight700;
+                        font-size: 18px;
+                        font-family: $font;
+                        color: $whiteColor;
+                        width: 150px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }  
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-color: #2D3A44;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            .footer-div-1 {
+                display: flex;
+                flex-direction: column;
+               justify-content: space-around;
+               padding-left: 25px;
+                h3 {
+                    font-weight: $weight700;
+                    color: #1098FC;
+                    font-family: $font;
+                    font-size: 24px;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 35px;
+                    .foot-links {
+                        display: flex;
+                        flex-direction: column;
+                        h5 {
+                            color: $whiteColor;
+                            font-family: $font;
+                            font-size: 16px;
+                            font-weight: $weight700;
+                        }
+                        a {
+                            color: #F2F2F2;
+                            font-family: $font;
+                            font-size: 16px;
+                            font-weight: 400;
+                            text-decoration: none;
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+            .footer-div-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 25px;
+                padding-left: 25px;
+                span {
+                    color: #F2F2F2;
+                    font-family: $font;
+                    font-size: 16px;
+                    font-weight: 400;
+                    width: 340px;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }     
 }
