@@ -294,3 +294,236 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+    .App {
+        padding: 0;
+        margin: 0;
+        header {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            gap: 25px;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            h4 {
+                color: #1098FC;
+                font-size: 24px;
+                font-weight: 700;
+                font-family: $font;
+            }
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 700px;
+                .nav_link {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                    align-items: center;
+                    a {
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: $font;
+                        text-decoration: none;
+                    }
+                }
+                .nav_btn {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    align-items: center;
+                    .login {
+                        background-color: transparent;
+                        border: none;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                    }
+                    .getStarted {
+                        background-color: transparent;
+                        border: 1px solid $whiteColor;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $whiteColor;
+                        text-align: center;
+                        width: 165px;
+                        padding: 8px 28px 8px 28px;
+                        border-radius: 47px;
+                    }
+                }
+            }
+        }
+        .sub-header {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            justify-content: center;
+            margin-top: 50px;
+            .first-div {
+                display: flex;
+                flex-direction: column;
+                padding-top: 70px;
+                padding-left: 40px;
+                padding-bottom: 25px;
+                h1 {
+                    font-size: 32px;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    color: #FFFFFF;
+                    width: 380px;
+                }
+                p {
+                    color: $whiteColor;
+                    font-size: 19px;
+                    font-family: $font;
+                    font-weight: $weight500;
+                    width: 308px;
+                }
+                button {
+                    background-color: #1098FC;
+                    height: 48px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    font-weight: $weight500;
+                    font-size: 15px;
+                    font-family: $font;
+                    text-align: center;
+                    border: none;
+                    width: 223px;
+                    padding: 8px 48px 8px 48px;
+                    border-radius: 47px;
+                }
+            }
+            .second-div {
+                img {
+                    width: 350px;
+                    height: 301px;
+                }
+            }
+        }
+        .working-section {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #24272A;
+            padding-top: 65px;
+            .working-details {
+                display: flex;
+                flex-direction: column;
+                width: 633px;
+                background-color: #2D3A44;
+                border-radius: 25px;
+                h4 {
+                    color: $whiteColor;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #F2F2F2;
+                    font-weight: 400;
+                    font-family: $font;
+                    font-size: 16px;
+                    width: 600px;
+                    line-height: 24px;
+                }
+            }
+        .working-steps {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 100%;
+            margin-top: 40px;
+            gap: 40px;
+            .list-of-steps {
+                width: 33px;
+                height: 749px;
+            }
+            .stages {
+                display: flex;
+                flex-direction: column;
+                padding-top: 60px;
+                .steps {
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        font-weight: $weight700;
+                        font-size: 33px;
+                        font-weight: $font;
+                        color: $whiteColor;
+                        width: 259px;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        width: 259px;
+                        color: $whiteColor;
+                        font-weight: 400;
+                        font-family: $font;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .nft-card {
+                img{
+                    width: 178px;
+                    height: 190px;
+                }
+            }
+        }
+        }
+        .useCase-section {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 25px;
+            h3 {
+                font-weight: $weight700;
+                color: $whiteColor;
+                font-size: 47px;
+                font-family: $font;
+                margin-left: 120px;
+            }
+            .first-case {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 35px;
+                .case {
+                    width: 180px;
+                    height: 280px;
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid $whiteColor;
+                    border-radius: 15px;
+                    gap: 10px;
+                    .bg-nav {
+                        background-image: url(./images/FrameCoinB.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 180px;
+                        height: 259px;
+                    }
+                    span {
+                        font-weight: $weight700;
+                        font-size: 18px;
+                        font-family: $font;
+                        color: $whiteColor;
+                        width: 150px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+        
+}
