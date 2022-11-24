@@ -36,6 +36,9 @@ body {
             justify-content: space-between;
             align-items: center;
             width: 1100px;
+            img {
+                display: none;
+            }
             .nav_link {
                 display: flex;
                 flex-direction: row;
@@ -325,6 +328,9 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 width: 700px;
+                img {
+                    display: none;
+                }
                 .nav_link {
                     display: flex;
                     flex-direction: row;
@@ -562,6 +568,9 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 width: 500px;
+                img {
+                    display: none;
+                }
                 .nav_link {
                     display: flex;
                     flex-direction: row;
@@ -878,6 +887,11 @@ body {
                 background-color: #253038;
                 gap: 25px;
                 z-index: 1;
+                img {
+                    display: flex;
+                    width: 56px;
+                    height: 48px;
+                }
                 .nav_link {
                     flex-direction: column;
                     gap: 25px;
