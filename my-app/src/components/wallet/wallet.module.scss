@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+$font : 'Inter', sans-serif;
+$whiteColor: #FFFFFF;
+$weight700: 700;
+$weight500: 500;
+
+.walletSection {
+    display: flex;
+    flex-direction: row;
+    .imgDiv {
+        background-color: #24272A;
+        display: flex;
+        flex-direction: column;
+        width: 640px;
+        height: 650px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .img {
+            width: 250px;
+            height: 250px;
+        }
+        .Nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            .h3 {
+                color: $whiteColor;
+                font-weight: $weight700;
+                font-size: 47px;
+                font-family: $font;
+            }
+            .p {
+                font-family: $font;
+                font-size: 24px;
+                font-weight: 600;
+                color: $whiteColor;
+            }
+            .span {
+                font-family: $font;
+                font-size: 16px;
+                font-weight: 400;
+                color: $whiteColor;
+            }
+        }
+    }
+    .textDiv {
+        width: 640px;
+        background-color: #EDF3F8;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .h2 {
+            color: #24272A;
+            font-size: 33px;
+            font-weight: $weight700;
+            font-family: $font;
+            text-align: center;
+        }
+        .connectBtn {
+            background-color: #1098FC;
+            height: 48px;
+            text-align: center;
+            color: #FFFFFF;
+            font-weight: $weight500;
+            font-size: 15px;
+            font-family: $font;
+            text-align: center;
+            border: none;
+            width: 350px;
+            padding: 8px 48px 8px 48px;
+            border-radius: 47px;
+        }
+        .howLink {
+            color: #24272A;
+            font-family: $font;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+}

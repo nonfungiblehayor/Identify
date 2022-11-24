@@ -3,7 +3,7 @@ import menu from '../images/menu.svg'
 import cancel from '../images/cancel.png'
 import { useRef } from 'react'
 
-function Header() {
+function Header(props) {
     // const [display, showMenu] = useState(false)
 
     const divRef = useRef()
@@ -31,7 +31,7 @@ function Header() {
             </nav>
             <nav className="nav_btn">
                 <button className="login">Login</button>
-                <button className="getStarted">Get started</button>
+                <button className="getStarted" onClick={props.control}>Get started</button>
             </nav>
         </div>
     </header>
