@@ -549,6 +549,8 @@ body {
             flex-direction: row;
             max-width: 100%;
             gap: 15px;
+            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
             padding-left: 20px;
             padding-right: 20px;
@@ -560,20 +562,26 @@ body {
                 font-family: $font;
             }
             .menu {
-                display: none;
+                display: flex;
+                width: 56px;
+                height: 48px;
             }
             div {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 width: 500px;
+                background-color: #253038;
+                gap: 25px;
+                z-index: 1;
                 img {
-                    display: none;
+                    display: flex;
+                    width: 56px;
+                    height: 48px;
                 }
                 .nav_link {
-                    display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     gap: 25px;
                     align-items: center;
                     a {
@@ -585,17 +593,20 @@ body {
                     }
                 }
                 .nav_btn {
-                    display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     gap: 20px;
                     align-items: center;
                     .login {
-                        background-color: transparent;
+                        background-color: #1098FC;
                         border: none;
                         text-align: center;
-                        font-size: 16px;
+                        font-size: 12px;
                         font-weight: 500;
-                        color: #FFFFFF;
+                        color: $whiteColor;
+                        text-align: center;
+                        width: 280px;
+                        padding: 14px 18px 14px 18px;
+                        border-radius: 47px;
                     }
                     .getStarted {
                         background-color: transparent;
@@ -605,13 +616,13 @@ body {
                         font-weight: 500;
                         color: $whiteColor;
                         text-align: center;
-                        width: 120px;
-                        padding: 8px 18px 8px 18px;
+                        width: 280px;
+                        padding: 14px 18px 14px 18px;
                         border-radius: 47px;
                     }
                 }
             }
-        }
+        } 
         .sub-header {
             display: flex;
             flex-direction: column;
