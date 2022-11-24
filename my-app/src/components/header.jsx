@@ -7,7 +7,7 @@ function Header(props) {
     // const [display, showMenu] = useState(false)
 
     const divRef = useRef()
-
+   
 
     const controlBar = () => {
         divRef.current.style.display = 'flex'
@@ -16,6 +16,10 @@ function Header(props) {
     const closeBar = () => {
         divRef.current.style.display = 'none'
     }
+
+   
+
+
     return <header>
         <h4>
             Identify
