@@ -238,3 +238,115 @@ $weight500: 500;
         }
     }
 }
+
+@media screen and (max-width: 581px) and (min-width: 320px) {
+    .walletSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        .imgDiv {
+            display: none;
+            .img {
+                display: none;
+            }
+            .Nav {
+                display: none;
+                
+                .h3 {
+                    display: none;
+                }
+                .p {
+                    display: none;
+                }
+                .span {
+                   display: none;
+                }
+            }
+        }
+        .textDiv {
+            width: 300px;
+            background-color: #EDF3F8;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 516px;
+            margin-top: 40px;
+            border-radius: 25px;
+            .h2 {
+                color: #24272A;
+                font-size: 26px;
+                font-weight: $weight700;
+                font-family: $font;
+                text-align: center;
+            }
+            .connectBtn {
+                background-color: #1098FC;
+                height: 48px;
+                text-align: center;
+                color: #FFFFFF;
+                font-weight: $weight500;
+                font-size: 15px;
+                font-family: $font;
+                text-align: center;
+                border: none;
+                width: 280px;
+                padding: 8px 24px 8px 24px;
+                border-radius: 47px;
+            }
+            .howLink {
+                color: #24272A;
+                font-family: $font;
+                font-weight: 400;
+                font-size: 16px;
+                text-align: center;
+                text-decoration: none;
+            }
+        }
+        .connectedDiv {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            background-color: #EDF3F8;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            height: 516px;
+            margin-top: 40px;
+            border-radius: 25px;
+            .mark {
+                width: 81px;
+                height: 63px;
+            }
+            .spin {
+                font-weight: 800;
+                font-size: 33px;
+                font-family: $font;
+                color: #24272A;
+            }
+            .connected_Btn {
+                text-decoration: none;
+                background-color: #1098FC;
+                height: 48px;
+                text-align: center;
+                color: #FFFFFF;
+                font-weight: $weight500;
+                font-size: 15px;
+                font-family: $font;
+                text-align: center;
+                border: none;
+                width: 250px;
+                padding: 8px 24px 8px 24px;
+                border-radius: 47px;
+                align-items: center;
+                display: flex;
+                justify-content: center;               
+            }
+        }
+    }  
+}
