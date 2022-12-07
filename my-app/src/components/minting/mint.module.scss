@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+$font : 'Inter', sans-serif;
+$whiteColor: #FFFFFF;
+$weight700: 700;
+$weight500: 500;
+$weight400: 400;
+
+
+body {
+    background-color: #24272A;
+}
+.mintsection {
+    display: flex;
+    flex-direction: column;
+    background-color: #24272A;
+    max-width: 100%;
+    .header2 {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        gap: 35px;
+        align-items: center;
+        padding-left: 20px;
+        .h4 {
+            color: #1098FC;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: $font;
+        }
+        .menu2 {
+            display: none;
+        }
+        .ref {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 1100px;
+            img {
+                display: none;
+            }
+            .nav_link {
+                display: flex;
+                flex-direction: row;
+                gap: 35px;
+                align-items: center;
+                a {
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: $font;
+                    text-decoration: none;
+                }
+            }
+            .nav_btn {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                align-items: center;
+               .addr {
+                color: #FFFFFF;
+                font-size: 18px;
+                font-family: $font;
+                font-weight: $weight500;
+               }
+            }
+        }
+    }
+    .mint_section {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 40px;
+        .div1{
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            .welcome {
+                font-family: $font;
+                font-weight: $weight700;
+                color: $whiteColor;
+                font-size: 33px;
+            }
+            .sub_text {
+                font-family: $font;
+                font-weight: $weight400;
+                color: $whiteColor;
+                font-size: 16px;
+            }
+            .verifyBtn {
+                width: 350px;
+                text-align: center;
+                height: 58px;
+                border: 1px solid $whiteColor;
+                padding: 8px 48px 8px 48px;
+                color: $whiteColor;
+                font-family: $font;
+                font-weight: $weight500;
+                color: $whiteColor;
+                font-size: 16px;
+                background-color: transparent;
+                border-radius: 47px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .formSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .div2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            .arrImg {
+                width: 24px;
+                height: 24px;
+                align-self: flex-start;                
+            }
+            .details {
+                font-size: 33px;
+                color: $whiteColor;
+                font-weight: $weight700;
+                font-family: $font;
+                align-self: flex-start;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 100%;
+                gap: 40px;
+                .input {
+                    width: 557px;
+                    border: none;
+                    border-bottom: 1px solid #1098FC;
+                    background-color: transparent;
+                    color: $whiteColor;
+                    font-size: 16px;
+                    font-family: $font;
+                    font-weight: $weight400;
+                    padding-bottom: 15px;
+                }
+                .input:focus {
+                    outline: none;
+                }
+                .preview {
+                    width: 557px;
+                    height: 58px;
+                    padding: 8px 48px 8px 48px;
+                    background-color: #1098FC;
+                    color: $whiteColor;
+                    border-radius: 47px;
+                    color: $whiteColor;
+                    font-size: 16px;
+                    font-weight: $weight500;
+                    border: none;
+                }
+                .preview:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+    .cardSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .div3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            .arrImg {
+                width: 24px;
+                height: 24px;
+                align-self: flex-start;                
+            }
+            .details {
+                font-size: 33px;
+                color: $whiteColor;
+                font-weight: $weight700;
+                font-family: $font;
+                align-self: flex-start;
+            }
+            .card {
+                width: 453px;
+                height: 251px;
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                background-color: #5D51BB;
+                border-radius: 25px;
+                gap: 20px;
+                .address {
+                    color: $whiteColor;
+                    font-family: $font;
+                    font-weight: $weight700;
+                    font-size: 12px;
+                    align-self: center;
+                }
+                .cardImgs {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    // gap: 15px;
+                    align-items: center;
+                    max-width: 100%;
+                    .union {
+                        width: 55px;
+                        height: 47px;
+                    }
+                    .pfp {
+                        width: 134px;
+                        height: 134px;
+                        border-radius: 60px;
+                    }
+                    .vector {
+                        width: 29px;
+                        height: 16px;
+                    }
+                }
+                .inCard{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    max-width: 100%;
+                    .naming {
+                        color: $whiteColor;
+                        font-family: $font;
+                        font-weight: $weight700;
+                        font-size: 12px;
+                    }
+                }
+            } 
+            .preview {
+                width: 400px;
+                height: 58px;
+                padding: 8px 48px 8px 48px;
+                background-color: #1098FC;
+                color: $whiteColor;
+                border-radius: 47px;
+                color: $whiteColor;
+                font-size: 16px;
+                font-weight: $weight500;
+                border: none;
+                margin-top: 25px;
+            }
+            .preview:focus {
+                outline: none;
+            }
+        }
+    }
+}
