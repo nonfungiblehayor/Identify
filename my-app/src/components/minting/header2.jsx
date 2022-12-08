@@ -35,7 +35,7 @@ function Header2(props) {
                 <a href='/app'>White paper</a>
             </nav>
             <nav className={styles.nav_btn}>
-                <p className={styles.addr}>{address}</p>
+                <p className={styles.addr}>{props.walletAdr}</p>
             </nav>
         </div>
     </header>

@@ -3,12 +3,15 @@ import Card from '../../images/Component1.svg'
 import styles from './wallet.module.scss'
 import mark from '../../images/Mark.svg'
 import Web3 from 'web3'
+import { useNavigate } from 'react-router-dom';
 
 let account;
 
 export const addrContext = React.createContext(account)
 
 function Wallet() {
+
+    const navigate = useNavigate()
 
     const [nxtText, showNxt] = useState(false)
     const [connected, connect0] = useState(false) 
@@ -29,7 +32,11 @@ function Wallet() {
                 const accounts = await window.ethereum.request({
                     method: 'eth_requestAccounts',
                 })  
-               account = accounts[0];
+                navigate('/mintPage', {
+                    state: {
+                        account : accounts[0],
+                    }
+                })
                console.log(account)       
             }
             catch(error) {

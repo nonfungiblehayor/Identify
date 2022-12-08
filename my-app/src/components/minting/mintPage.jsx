@@ -5,10 +5,11 @@ import MintSection from "./mint-section";
 import Form from "./form-section";
 import { useState } from "react";
 import Web3 from "web3";
-
+import { useLocation } from 'react-router-dom';
 
 function MintPage() {
 
+    const { state } = useLocation();
     const [form, showForm] = useState(false)
 
     const displayForm = () => {
@@ -50,7 +51,7 @@ function MintPage() {
     
 
     return <section className={styles.mintsection}>
-        <Header2 />
+        <Header2 walletAdr={state.account}/>
         {form ? <Form fnc2={hideForm}/> : <MintSection fnc={requestAccount}/>}
     </section>
 }
