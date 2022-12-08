@@ -8,12 +8,14 @@ export const inputContext = React.createContext()
 export const inputContext2 = React.createContext()
 export const inputContext3 = React.createContext()
 export const inputContext4 = React.createContext()
+export const inputContext5 = React.createContext()
 
 function Form(props) {
     const [fnameVal, setFname] = useState('')
     const [firstnameVal, setFirstname] = useState('')
     const [lastnameVal, setLastname] = useState('')
     const [usernameVal, setUsername] = useState('')
+    const [pfp, setPfp] = useState('')
     const [prev, showPrev] = useState(false)
 
     const handleChange = event => {
@@ -31,6 +33,11 @@ function Form(props) {
     const handleChange4 = event => {
         setUsername(event.target.value);
       };
+
+      const handleChange5 = event => {
+        setPfp(URL.createObjectURL(event.target.files[0]));
+        console.log(pfp)
+      };
     
 
     const showPreview = () => {
@@ -45,6 +52,7 @@ function Form(props) {
         <inputContext2.Provider value={firstnameVal}>
         <inputContext3.Provider value={lastnameVal}>
         <inputContext4.Provider value={usernameVal}>
+        <inputContext5.Provider value={pfp}>
         <section className={styles.formSection}>
         {prev ? <CardPreview fnc3={hidePreview}/> : 
         <div className={styles.div2}>
@@ -55,11 +63,12 @@ function Form(props) {
                 <input onChange={handleChange3} value={lastnameVal} className={styles.input} type='text' id='Lname' placeholder='Last name'></input>
                 <input onChange={handleChange4} value={usernameVal} className={styles.input} type='text' id='name' placeholder='username.eth'></input>
                 <input onChange={handleChange} value={fnameVal} className={styles.input} type='text' id='address' placeholder='wallet address'></input>
-                <input type='file' id="myfile"></input>
+                <input type='file' id="myfile" onChange={handleChange5} className={styles.input}></input>
                 <button className={styles.preview} onClick={showPreview}>preview</button>
             </form>
         </div> }
     </section>
+    </inputContext5.Provider>
     </inputContext4.Provider>
     </inputContext3.Provider>
     </inputContext2.Provider>

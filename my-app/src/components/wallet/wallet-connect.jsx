@@ -39,6 +39,7 @@ function Wallet() {
             }
             catch(error) {
                 console.log('error')
+                alert('please connect metamask wallet')
             }
         } else {
             alert('install metamask wallet')

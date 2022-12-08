@@ -9,12 +9,14 @@ import { useContext } from "react";
 import { inputContext2 } from "./form-section";
 import { inputContext3 } from "./form-section";
 import { inputContext4 } from "./form-section";
+import { inputContext5 } from "./form-section";
 
 function CardPreview(props) {
     const walletAddr = useContext(inputContext)
     const firstName = useContext(inputContext2)
     const lastName = useContext(inputContext3)
     const userName = useContext(inputContext4)
+    const image = useContext(inputContext5)
     return <section className={styles.cardSection}>
         <div className={styles.div3}>
         <img src={arrow} className={styles.arrImg} onClick={props.fnc3} alt='arrow back'></img>
@@ -25,7 +27,7 @@ function CardPreview(props) {
             </p>
             <nav className={styles.cardImgs}>
                 <img src={union} className={styles.union} alt='union'></img>
-                <img src={pfp} className={styles.pfp} alt='pfp'></img>
+                <img src={image} className={styles.pfp} alt='pfp'></img>
                 <img src={vector} className={styles.vector} alt='vector'></img>
             </nav>
             <div className={styles.inCard}>
