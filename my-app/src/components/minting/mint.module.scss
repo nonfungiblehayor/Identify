@@ -266,3 +266,73 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 768px) and (min-width: 582px) {
+    .mintsection {
+        display: flex;
+        flex-direction: column;
+        background-color: #24272A;
+        max-width: 100%;
+        .formSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .div2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                .arrImg {
+                    width: 24px;
+                    height: 24px;
+                    align-self: flex-start;                
+                }
+                .details {
+                    font-size: 33px;
+                    color: $whiteColor;
+                    font-weight: $weight700;
+                    font-family: $font;
+                    align-self: flex-start;
+                }
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 100%;
+                    gap: 40px;
+                    .input {
+                        width: 400px;
+                        border: none;
+                        border-bottom: 1px solid #1098FC;
+                        background-color: transparent;
+                        color: $whiteColor;
+                        font-size: 16px;
+                        font-family: $font;
+                        font-weight: $weight400;
+                        padding-bottom: 15px;
+                    }
+                    .input:focus {
+                        outline: none;
+                    }
+                    .preview {
+                        width: 400px;
+                        height: 58px;
+                        padding: 8px 48px 8px 48px;
+                        background-color: #1098FC;
+                        color: $whiteColor;
+                        border-radius: 47px;
+                        color: $whiteColor;
+                        font-size: 16px;
+                        font-weight: $weight500;
+                        border: none;
+                    }
+                    .preview:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }  
+}
