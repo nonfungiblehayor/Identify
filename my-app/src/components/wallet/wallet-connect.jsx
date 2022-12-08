@@ -27,23 +27,21 @@ function Wallet() {
 
     async function requestAccount()  {
         if(window.ethereum) {
-            console.log(10)
             try {
                 const accounts = await window.ethereum.request({
                     method: 'eth_requestAccounts',
-                })  
+                }) 
                 navigate('/mintPage', {
                     state: {
                         account : accounts[0],
                     }
-                })
-               console.log(account)       
+                })  
             }
             catch(error) {
                 console.log('error')
             }
         } else {
-            console.log(account)
+            alert('install metamask wallet')
         }
     }
 
@@ -52,8 +50,6 @@ function Wallet() {
             await requestAccount()
             const provider = new Web3.providers.HttpProvider('window.ethereum')
             const web3 = new Web3(provider)
-            done()
-            console.log('connected')
         }
     }
 

@@ -895,6 +895,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 width: 500px;
+                height: 350px;
                 background-color: #253038;
                 gap: 25px;
                 z-index: 1;
@@ -1047,7 +1048,7 @@ body {
                     flex-direction: column;
                     h4 {
                         font-weight: $weight700;
-                        font-size: 33px;
+                        font-size: 25px;
                         font-weight: $font;
                         color: $whiteColor;
                         width: 259px;

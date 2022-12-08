@@ -55,6 +55,7 @@ function Form(props) {
                 <input onChange={handleChange3} value={lastnameVal} className={styles.input} type='text' id='Lname' placeholder='Last name'></input>
                 <input onChange={handleChange4} value={usernameVal} className={styles.input} type='text' id='name' placeholder='username.eth'></input>
                 <input onChange={handleChange} value={fnameVal} className={styles.input} type='text' id='address' placeholder='wallet address'></input>
+                <input type='file' id="myfile"></input>
                 <button className={styles.preview} onClick={showPreview}>preview</button>
             </form>
         </div> }
