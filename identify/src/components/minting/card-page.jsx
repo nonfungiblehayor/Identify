@@ -12,8 +12,30 @@ import { inputContext4 } from "./form-section";
 import { inputContext5 } from "./form-section";
 import {ethers} from 'ethers'
 import contract from './contract/identifycontract.json'
+import { useState } from "react";
+import * as htmlToImage from 'html-to-image';
+import { toPng } from 'html-to-image';
+import { useRef } from "react";
 
 function CardPreview(props) {
+
+    const [mintState, setMintState] = useState()
+    let hash;
+    const domEl = useRef(null)
+
+    const minted = () =>{
+        setMintState(!mintState)
+    }
+
+    const download = () => {
+        toPng(domEl.current, { cacheBust: true, })
+      .then((dataUrl) => {
+        const link = document.createElement('a')
+        link.download = 'my-image-name.png'
+        link.href = dataUrl
+        link.click()
+      })
+    }
 
     const amount = 1;
    
@@ -21,9 +43,7 @@ function CardPreview(props) {
 
     const abi = [
         'function mint(uint256 amtToken) external'
-    ]
-
-  
+    ] 
 
     async function mint() {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -32,6 +52,8 @@ function CardPreview(props) {
         const txResponse = await identifyIns.mint(amount)
         const txReceipt = await txResponse.wait()
         console.log(txReceipt)
+        hash = txReceipt.transactionHash;
+        minted()
     }
 
 
@@ -46,7 +68,7 @@ function CardPreview(props) {
         <div className={styles.div3}>
         <img src={arrow} className={styles.arrImg} onClick={props.fnc3} alt='arrow back'></img>
         <h2 className={styles.details}>Verification completed</h2>
-        <div className={styles.card}>
+        <div className={styles.card} ref={domEl}>
             <p className={styles.address}>
             {walletAddr}
             </p>
@@ -60,7 +82,13 @@ function CardPreview(props) {
                 <span className={styles.naming}>{userName}</span>
             </div>
         </div>
-        <button className={styles.preview} onClick={mint}> proceed to mint</button>
+        {mintState ? <div className={styles.downloadSec}>
+        <a className={styles.hashLink} href="https://mumbai.polygonscan.com">Here is your transaction hash: {hash} check on polygon scan </a>
+        <button className={styles.preview} onClick={download}> Download </button>
+        </div>
+        : 
+        <button className={styles.preview} onClick={mint}> proceed to mint</button> 
+        }
         </div>
     </section>
 }
