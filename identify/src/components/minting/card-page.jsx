@@ -10,8 +10,33 @@ import { inputContext2 } from "./form-section";
 import { inputContext3 } from "./form-section";
 import { inputContext4 } from "./form-section";
 import { inputContext5 } from "./form-section";
+import {ethers} from 'ethers'
+import contract from './contract/identifycontract.json'
 
 function CardPreview(props) {
+
+    const amount = 1;
+   
+    const address = '0xf54f2fa0100e85f13304648caa1cb834086b1907'
+
+    const abi = [
+        'function mint(uint256 amtToken) external'
+    ]
+
+  
+
+    async function mint() {
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        const signer = provider.getSigner()
+        const identifyIns = new ethers.Contract(address, abi, signer)
+        const txResponse = await identifyIns.mint(amount)
+        const txReceipt = await txResponse.wait()
+        console.log(txReceipt)
+    }
+
+
+    
+
     const walletAddr = useContext(inputContext)
     const firstName = useContext(inputContext2)
     const lastName = useContext(inputContext3)
@@ -35,7 +60,7 @@ function CardPreview(props) {
                 <span className={styles.naming}>{userName}</span>
             </div>
         </div>
-        <button className={styles.preview}> proceed to mint</button>
+        <button className={styles.preview} onClick={mint}> proceed to mint</button>
         </div>
     </section>
 }
