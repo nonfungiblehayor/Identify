@@ -16,7 +16,7 @@ contract Identify is ERC721, Ownable {
 
     constructor() ERC721('identify', 'ID') {
         for(uint256 i = 1; i <= tokenReserve; i++) {
-            _safeMint(msg.sender, 1000);
+            _safeMint(msg.sender, 1);
         }
         totalSupply = tokenReserve;
     }
@@ -27,7 +27,7 @@ contract Identify is ERC721, Ownable {
         require(mintedWallets[msg.sender] + amtToken <= 1);
         require(totalSupply + amtToken <= maxTokens);
         for(uint256 i = 1; i <= amtToken; i++) {
-            _safeMint(msg.sender, amtToken);
+            _safeMint(msg.sender, totalSupply + i);
         }
         mintedWallets[msg.sender] = amtToken;
         totalSupply += amtToken;

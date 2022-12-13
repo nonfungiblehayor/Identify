@@ -39,7 +39,7 @@ function CardPreview(props) {
 
     const amount = 1;
    
-    const address = '0xf54f2fa0100e85f13304648caa1cb834086b1907'
+    const address = '0xe3e3458ea5c99c45Ba15204267A9a5ECb7559d2B'
 
     const abi = [
         'function mint(uint256 amtToken) external'
@@ -49,10 +49,13 @@ function CardPreview(props) {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
         const identifyIns = new ethers.Contract(address, abi, signer)
-        const txResponse = await identifyIns.mint(amount)
+        const txResponse = await identifyIns.mint(amount, {
+            gasLimit: 100000,
+        })
         const txReceipt = await txResponse.wait()
         console.log(txReceipt)
         hash = txReceipt.transactionHash;
+        console.log(txReceipt.transactionHash)
         minted()
     }
 

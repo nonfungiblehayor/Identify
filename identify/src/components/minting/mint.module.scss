@@ -247,6 +247,35 @@ body {
                     }
                 }
             } 
+            .downloadSec {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                .hashLink {
+                    color: $whiteColor;
+                    font-size: 16px;
+                    font-family: $font;
+                    font-weight: $weight400;
+                    text-align: center;
+                    text-decoration: none;
+                }
+                .preview {
+                    width: 400px;
+                    height: 58px;
+                    padding: 8px 48px 8px 48px;
+                    background-color: #1098FC;
+                    color: $whiteColor;
+                    border-radius: 47px;
+                    color: $whiteColor;
+                    font-size: 16px;
+                    font-weight: $weight500;
+                    border: none;
+                    margin-top: 25px;
+                }
+                .preview:focus {
+                    outline: none;
+                }
+            }
             .preview {
                 width: 400px;
                 height: 58px;
