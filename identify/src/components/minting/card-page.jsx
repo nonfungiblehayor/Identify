@@ -38,8 +38,11 @@ function CardPreview(props) {
     }
 
     const amount = 1;
+
+    //      0xde46e33a54b712ED4A4Bdcc449488BA70dF6228d
+    //      0x5370A9143C194F06FFDe6D3A68b099F4882a5638
    
-    const address = '0xe3e3458ea5c99c45Ba15204267A9a5ECb7559d2B'
+    const address = '0xde46e33a54b712ED4A4Bdcc449488BA70dF6228d'
 
     const abi = [
         'function mint(uint256 amtToken) external'
@@ -49,9 +52,7 @@ function CardPreview(props) {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
         const identifyIns = new ethers.Contract(address, abi, signer)
-        const txResponse = await identifyIns.mint(amount, {
-            gasLimit: 100000,
-        })
+        const txResponse = await identifyIns.mint(amount)
         const txReceipt = await txResponse.wait()
         console.log(txReceipt)
         hash = txReceipt.transactionHash;
@@ -86,11 +87,13 @@ function CardPreview(props) {
             </div>
         </div>
         {mintState ? <div className={styles.downloadSec}>
-        <a className={styles.hashLink} href="https://mumbai.polygonscan.com">Here is your transaction hash: {hash} check on polygon scan </a>
-        <button className={styles.preview} onClick={download}> Download </button>
+        <a className={styles.hashLink} href="https://mumbai.polygonscan.com">Here is your transaction {hash} check on polygon scan </a>
         </div>
         : 
+        <>
         <button className={styles.preview} onClick={mint}> proceed to mint</button> 
+        <button className={styles.preview} onClick={download}> Download </button>
+        </>
         }
         </div>
     </section>
