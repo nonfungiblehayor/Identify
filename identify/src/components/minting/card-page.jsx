@@ -17,10 +17,12 @@ import * as htmlToImage from 'html-to-image';
 import { toPng } from 'html-to-image';
 import { useRef } from "react";
 
+// let hash;
+
 function CardPreview(props) {
 
     const [mintState, setMintState] = useState()
-    let hash;
+    const [hash, hashState] = useState(null) 
     const domEl = useRef(null)
 
     const minted = () =>{
@@ -47,7 +49,9 @@ function CardPreview(props) {
 
     const abi = [
         'function mint(uint256 amtToken) external'
-    ] 
+    ]
+    
+   
 
     async function mint() {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -56,8 +60,8 @@ function CardPreview(props) {
         const txResponse = await identifyIns.mint(amount)
         const txReceipt = await txResponse.wait()
         console.log(txReceipt)
-        hash = txReceipt.transactionHash;
-        console.log(txReceipt.transactionHash)
+        hashState(txReceipt.transactionHash)
+        console.log(hash)
         minted()
     }
 
@@ -88,7 +92,7 @@ function CardPreview(props) {
             </div>
         </div>
         {mintState ? <div className={styles.downloadSec}>
-        <a className={styles.hashLink} href="https://mumbai.polygonscan.com">Here is your transaction {hash} check on polygon scan </a>
+            <a className={styles.hashLink} href={`https://goerli.etherscan.io/tx/${hash}`}>{`check your transaction etherscan scan`}</a>
         <button className={styles.preview} onClick={download}> Download </button>
         </div>
         : 
