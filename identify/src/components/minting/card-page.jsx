@@ -27,20 +27,21 @@ function CardPreview(props) {
         setMintState(!mintState)
     }
 
-    const download = () => {
-        toPng(domEl.current, { cacheBust: true, })
-      .then((dataUrl) => {
-        const link = document.createElement('a')
-        link.download = 'my-image-name.png'
-        link.href = dataUrl
-        link.click()
-      })
-    }
+    
+    const download = async () => {
+        const dataUrl = await htmlToImage.toPng(domEl.current);
+       
+        // download image
+        const link = document.createElement('a');
+        link.download = "identify.png";
+        link.href = dataUrl;
+        link.click();
+      }
 
     const amount = 1;
 
-    //      0xde46e33a54b712ED4A4Bdcc449488BA70dF6228d
-    //      0x5370A9143C194F06FFDe6D3A68b099F4882a5638
+    //      0xde46e33a54b712ED4A4Bdcc449488BA70dF6228d goerli 
+    //      0x5370A9143C194F06FFDe6D3A68b099F4882a5638 ganache
    
     const address = '0xde46e33a54b712ED4A4Bdcc449488BA70dF6228d'
 
@@ -88,11 +89,11 @@ function CardPreview(props) {
         </div>
         {mintState ? <div className={styles.downloadSec}>
         <a className={styles.hashLink} href="https://mumbai.polygonscan.com">Here is your transaction {hash} check on polygon scan </a>
+        <button className={styles.preview} onClick={download}> Download </button>
         </div>
         : 
         <>
         <button className={styles.preview} onClick={mint}> proceed to mint</button> 
-        <button className={styles.preview} onClick={download}> Download </button>
         </>
         }
         </div>
