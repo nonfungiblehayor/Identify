@@ -98,6 +98,7 @@ function CardPreview(props) {
         : 
         <>
         <button className={styles.preview} onClick={mint}> proceed to mint</button> 
+        <button className={styles.preview} onClick={download}> Download </button>
         </>
         }
         </div>
