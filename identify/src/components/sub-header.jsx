@@ -10,7 +10,6 @@ function SubHeader() {
             <p>
             Get your unique NFT Identity here
             </p>
-            <button>Mint your identity</button>
         </div>
         <div className="second-div">
             <img src={ComponentCard} alt='nft card'></img>
